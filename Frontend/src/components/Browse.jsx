@@ -14,7 +14,7 @@ const Browse = () => {
     const dispatch = useDispatch();
     useEffect(()=>{
         return () => {
-            dispatch(setSearchedQuery(""))
+            dispatch(setSearchedQuery(""));
         }
     },[])
     return (
