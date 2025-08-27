@@ -19,7 +19,7 @@ app.use(cookieParser())
 const corsOptions = {
   origin: [
     "http://localhost:5173", // local dev
-    "https://career-nest-job-portal-6.onrender.com" // deployed frontend
+    "https://career-nest-job-portal-7.onrender.com" // deployed frontend
   ],
   credentials: true
 };
