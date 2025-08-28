@@ -23,7 +23,11 @@ const corsOptions = {
   ],
   credentials: true
 };
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true
+}));
 
 const PORT = process.env.PORT || 1000
 
