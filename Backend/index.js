@@ -11,23 +11,16 @@ import applicationRoute from "./routes/application.route.js"
 dotenv.config({});
 
 const app = express();
-
+//middleware
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.use(cookieParser())
 
 const corsOptions = {
-  origin: [
-    "http://localhost:5173", // local dev
-    "https://career-nest-job-portal-7.onrender.com" // deployed frontend
-  ],
-  credentials: true
-};
-// app.use(cors(corsOptions));
-app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true
-}));
+    origin:'http://localhost:5173',
+    credentials:true
+}
+app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 1000
 
